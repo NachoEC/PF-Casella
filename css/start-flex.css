@@ -1,0 +1,221 @@
+/* BS Flex Starter Template */
+:root {
+    --del-color: var(--bs-danger);
+  }
+  header, section {
+    /*padding:3rem 0;*/
+    /*min-height:600px;*/
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+    position:relative;
+    overflow: hidden;
+  }
+  
+  /* Placeholders */
+  .bg-random {
+    position:relative;
+    background: url(https://picsum.photos/1800/600) center center / cover no-repeat;
+  }
+  /*.img-placeholder[src]{
+    content:;
+  }*/
+  .separador {
+    display:inline-block;
+    border-top:1px solid #ccc;
+    width:80px;
+    margin-bottom:.8em;
+  }
+  
+  /* Light bg */
+  .bg-lightgrey {
+    background:#F7F7F7;
+  }
+  
+  /* Con background */
+  .with-bg {
+    position:relative;
+    color:white;
+    z-index:0;
+  }
+  .with-bg:before {
+    content:'';
+    background:rgba(0,0,0,.5);
+    width: 100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+  }
+  
+  /* Cards */
+  .card {
+    min-height:300px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding:2em;
+    margin-bottom:1em;
+  }
+  .redondeado, .redondeado:before {
+    border-radius:10px;
+  }
+  
+  /* To the edges half image */
+  .row .col-img-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .col-img-wrap img {
+    width: 50vw;
+  }
+  .col-align-right img {
+    float: right;
+  }
+  
+  /* Decoration emoji */
+  .deco-above-the-line {
+    font-size: 150px;
+    position: absolute;
+    bottom: -70px;
+    right: -30px;
+  }
+  
+  
+  /* Carrusel */
+  .wrapper {
+    max-width:100%;
+    overflow-x:scroll
+  }
+  .card-deck {
+    width:100%;
+    display:flex;
+  }
+  .card-deck .card {
+    max-width:250px;
+  }
+  
+  @media (max-width:960px) {
+    .col-img-wrap  {
+      width:100vw;
+      max-width:100vw;
+      margin-left: calc((100vw - 540px)/2 *-1);
+    }
+    .col-img-wrap img {
+      width:100vw;
+       max-width: 100%;
+        height: auto;
+    }
+    .col-align-right {
+      order:1;
+    }
+  }
+  
+  @media (min-width:768px) and (max-width:960px) {
+    .col-img-wrap  {
+      width:100vw;
+      max-width:100vw;
+      margin-left: calc((100vw - 720px)/2 *-1);
+    }
+    .col-img-wrap img {
+      width:100vw;
+       max-width: 100%;
+        height: auto;
+    }
+    .col-align-right {
+      order:1;
+    }
+  }
+  
+  @media (max-width:540px) {
+    .col-img-wrap  {
+      width:100vw;
+      max-width:100vw;
+      margin-left: 0;
+    }
+    .col-img-wrap img {
+      width:100vw;
+       max-width: 100%;
+        height: auto;
+    }
+    .col-align-right {
+      order:1;
+    }
+  
+  }
+  
+  /* Animated */
+  .animated:hover {
+    box-shadow:1px 1px 10px rgba(0,0,0,.5);
+    transform:scale(1.02);
+    transition:300ms ease-in-out;
+  }
+  .outsider-image {
+    display:flex;
+    flex-grow:1;
+    float:right;
+    align-self: end;
+    width:100%;
+    position: relative;
+    justify-self: end;
+  }
+  
+  /* Lightbox */
+  .lightbox {
+   display: none;
+   /** Position and style */
+          position: fixed;
+          z-index: 999;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          top: 0;
+          left: 0;
+          transform:scale(0);
+          transition:400ms ease;
+          background: rgba(255,255,255,0.8);
+  }
+  
+  .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      margin-top: 2%;
+  }
+  .lightbox:target {
+          outline: none;
+          cursor:zoom-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform:scale(1);
+          transition: opacity 400ms ease 0ms;
+        }
+  
+  /* Formulario */
+  .form-card {
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+    width: 100%;
+    max-width: 700px;
+    padding: 1.7em 2em;
+    border-radius: 10px;
+  }
+  label {
+    margin-bottom: .5em;
+  }
+  span.error {
+    color: red;
+    font-size: .8em;
+    float: right;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  input.form-control {
+    height: 48px;
+  }
+  input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] {
+          border-color: var(--del-color);
+          margin-bottom: 0!important;
+        }
+  
