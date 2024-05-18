@@ -275,10 +275,11 @@
    */
   
   button,
-  html [type="button"], /* 1 */
+    html [type="button"], /* 1 */
   [type="reset"],
   [type="submit"] {
-    -webkit-appearance: button; /* 2 */
+    
+    -webkit-ppearance: button; /* 2 */
   }
   
   /**
@@ -372,7 +373,7 @@
    */
   
   [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
+    -webkit-ppearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
   }
   
